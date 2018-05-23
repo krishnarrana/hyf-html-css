@@ -1,0 +1,414 @@
+*{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+body{	
+	background: #EFEFEF; 
+}
+img{
+	width: 100%;
+	height: auto;
+}
+h1,h2,h3,h4{
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+p{
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 26px;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+} 
+
+.clearfix:after {
+  clear: both;
+}
+.main-container{
+	max-width: 980px;
+	margin: 0 auto;
+}
+.menu{
+	background: #FEC608;
+	padding: 0 30px;
+}
+.brand-name{
+	float: left;
+}
+.brand-name a{
+	font-size: 16px;
+	padding: 30px;
+	color: #333;
+	font-weight: 700;
+	display: block;
+}
+.menu-list{
+	float: right;
+	list-style: none;
+}
+.menu-list li{
+	display: inline-block;
+}
+.menu-list li a{
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 30px;
+	display: block;
+	transition: .2s;
+}
+.menu-list li a:hover{
+	background: #333;
+	color: #fff;
+}
+
+.profile-section{
+	background: #EFEFEF;
+	padding: 50px 20px 30px;
+}
+.profile-container{
+	background: #fff;
+	max-width: 980px;
+	margin:0 auto;
+	display: flex;
+	padding: 20px 50px 0;
+}
+.image-box{
+	min-width: 350px;
+	padding: 30px;
+}
+.image-container{
+	max-width: 300px;
+	max-height: 350px;
+	overflow: hidden;
+}
+
+.info-box{
+	padding: 30px;
+}
+.title{
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+}
+.title span{
+	color: #FEC608;
+}
+.work-title{
+	font-size: 21px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	color: #666;
+}
+.text{
+	color: #999;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: justify;
+	margin-bottom: 20px;
+}
+
+.info-table td{
+	padding: 5px 30px 5px 0;
+	color: #999;
+	font-size: 16px;
+}
+.info-table td:last-child{
+	font-weight: bold;
+	color: #666;
+}
+.btn{
+	box-shadow: none;
+	border: 0;
+	text-align: center;
+	color: #333;
+	padding: 15px 30px;
+	cursor: pointer;
+	background: #FEC608;
+	color:#333;
+	font-weight: 700;
+
+}
+
+.btn-download{
+	display: block;
+	margin: 30px auto;
+	width: 100%;
+	max-width: 300px;
+}
+.social-link li{
+	display: inline-block;
+	margin-top: 20px; 
+}
+.social-link li a{
+	color: #aaa;
+	transition: .3s;
+	display: block;
+	padding: 10px 20px;
+	border:2px solid #aaa;
+	margin-right: 10px;
+}
+.social-link li a:hover{
+	color: #333;	
+	border:2px solid #333;
+}
+
+.sub-title{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+	color: #333;
+	margin-bottom: 50px;
+}
+.sub-title span{
+
+	border:1px solid #333;
+	padding: 10px;
+	display: inline-block;
+}
+
+
+.portfolio-section{
+	padding: 50px 20px 30px;
+}
+.portfolio-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.portfolio{
+	width: 32%;
+	height:315px;
+	background-color: #fff;
+	margin-bottom: 20px;
+	
+}
+.profile-img{
+	height: 230px;
+	overflow: hidden;
+}
+#img1{	
+	background: url("../images/p1.jpg");	
+	background-size: cover; 
+}
+#img2{	
+	background: url("../images/p2.jpg");	
+	background-size: cover; 
+}
+#img3{	
+	background: url("../images/p3.jpg");	
+	background-size: cover; 
+}
+#img4{	
+	background: url("../images/p4.jpg");	
+	background-size: cover; 
+}
+#img5{	
+	background: url("../images/p5.jpg");	
+	background-size: cover; 
+}
+#img6{	
+	background: url("../images/p6.jpg");	
+	background-size: cover; 
+}
+
+.profile-info{
+	padding: 20px;
+}
+.profile-info-title{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+	color: #333;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.profile-info-text{
+	font-size: 16px;
+	font-weight: 200;
+	color: #333;
+	text-align: center;
+}
+
+
+.skills-section{
+	padding: 50px 20px 30px;
+}
+
+.skills-title{
+	font-size: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: #333;
+}
+.skills-list li{
+	color: #333;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.progress-container{
+	margin-top: 5px;
+}
+.progress-container progress{
+	width: 100%;
+	display: block;
+	height: 35px;
+	border: 0;
+	-webkit-appearance: none;
+   appearance: none;
+}
+.progress-container  progress::-webkit-progress-bar {
+  background-color: #fff;
+}
+.progress-container  progress[value]::-webkit-progress-value {
+  background:#FEC608;
+}
+
+.news-section{
+	padding: 50px 20px 50px;
+}
+
+.news-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.news{
+	width: 32%;
+	background:#fff;
+	margin-bottom: 20px;
+}
+.news-title{
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 0;
+	font-weight: 700;
+	font-size: 18px;
+	background-color: #333;
+	color: #fff;
+}
+.news-items {
+	padding: 20px ;
+
+}
+.news-items p{
+	color: #666;
+}
+.news-user-name{
+	color: #FEC608;
+}
+.blog{
+	padding: 20px;
+}
+.blog-title{
+	margin-top: 20px;
+}
+.insta-images-list{
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.insta-images-list li {
+	width: 32%;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.insta-images-list li img {
+	width: 170px;
+}
+.instagram{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.instagram-btn{
+	color: #fff;
+	background-color: #895B4E;
+	font-size: 14px;
+	padding: 8px 10px;
+	font-weight: 400;
+}
+.footer{
+	background-color: #474747;
+	color: #fff;
+	padding: 40px 20px 20px;
+	text-align: center;
+}
+@media(max-width: 900px){
+	.image-box{
+		width: 100%;
+		min-width: auto;
+	}
+	.profile-container{
+		padding: 10px;
+	}
+	.portfolio{
+		width: 49%;
+	}
+	.news{
+		width: 49%;
+	}
+}
+
+@media(max-width: 700px){
+	.image-box{
+		width: 100%;
+		min-width: auto;		
+	    padding: 10px;
+	}
+	.profile-container{
+		padding: 10px;
+	}
+	.image-container{
+		margin: 0 auto;
+	}
+	.profile-container {
+    	padding: 10px;
+    	flex-wrap: wrap;
+	}
+	.brand-name{
+		float: none;
+		text-align: center;
+	}
+	.menu-list {
+	    float: none;
+	    text-align: center;
+	}
+	.brand-name a {
+	    font-size: 14px;
+	    padding: 10px 10px 0;
+	}
+	.menu-list li a {
+	    font-size: 14px;
+	    padding: 10px;
+	}
+
+	.info-box {
+	    padding: 10px;
+	}
+
+	.portfolio,
+	.news{
+		width: 100%;
+	}
+	.portfolio-list,
+	.news-list{
+		justify-content:center;
+	}
+
+}
