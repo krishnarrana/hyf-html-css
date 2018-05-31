@@ -1,0 +1,332 @@
+body{
+	background: #EFEFEF;
+}
+p{
+	color: #999;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: justify;
+}
+.primary-navbar{
+	background: #FEC608;
+	padding: 0 30px;
+}
+.primary-navbar  .navbar-nav .nav-link{
+	font-size: 14px;
+	padding: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: .2s;
+}
+.primary-navbar  .navbar-nav .nav-link:hover{
+	background: #333;
+	color: #fff;
+}
+.primary-navbar .navbar-brand{
+	font-size: 14px;
+	padding: 30px;
+	color: #333;
+	font-weight: 700;
+	display: block;
+}
+.section{
+	padding:20px 20px 40px;
+}
+.profile-section{
+	background: #fff;
+	padding: 50px;
+	margin:50px 0 0;
+}
+
+.title	{
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+}
+.title span {
+	color: #FEC608;
+}
+.work-title {
+	font-size: 21px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	color: #666;
+}
+.table-borderless td{
+	border:0;
+}
+.table td{
+	padding: 5px 5px 5px 0;
+	font-size: 16px;
+	color: #999; 
+}
+.social-link li a{
+	color: #aaa;
+	transition: .3s;
+	display: block;
+	padding: 10px 20px;
+	border: 2px solid #aaa;
+	margin-right: 10px;
+}
+.social-link li a:hover {
+	color: #333;
+	border: 2px solid #333;
+}
+.btn-download {
+	display: block;
+	margin: 30px auto 0;
+	width: 100%;
+	border-color: #FEC608;
+	background: #FEC608;
+	color: #333;
+	font-weight: bold;
+	transition: .2s;
+	padding: 12px 20px;
+}
+.btn-download:hover {
+	border-color: #fff;
+	background: #333;
+	color: #FEC608;
+	font-weight: bold;
+}
+.info-box{
+	padding-left: 30px;
+}
+.skills-section{
+	padding: 0px;
+}
+
+.sub-title {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 32px;
+	text-align: center;
+	color: #333;
+	margin-bottom: 50px;
+}
+.sub-title span {
+	border: 1px solid #333;
+	padding: 10px;
+	display: inline-block;
+}
+.skills-title {
+	font-size: 21px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: #333;
+}
+.skills-list li {
+	color: #333;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.portfolio{
+	height: 315px;
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+.remove-padding{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.profile-img{
+	height: 230px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.profile-img:hover{
+	filter: grayscale(100%);
+}
+.profile-img:hover:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: .7;
+}
+.profile-img:hover i{
+	transform: translate(-50%,-50%) scale(3);
+}
+.profile-img i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	transition: .2s;
+	z-index: 2;
+	color: #fff;
+}
+#img1{	
+	background: url("../images/p1.jpg");	
+	background-size: cover; 
+}
+#img2{	
+	background: url("../images/p2.jpg");	
+	background-size: cover; 
+}
+#img3{	
+	background: url("../images/p3.jpg");	
+	background-size: cover; 
+}
+#img4{	
+	background: url("../images/p4.jpg");	
+	background-size: cover; 
+}
+#img5{	
+	background: url("../images/p5.jpg");	
+	background-size: cover; 
+}
+#img6{	
+	background: url("../images/p6.jpg");	
+	background-size: cover; 
+}
+
+.profile-info{
+	padding: 20px;
+}
+.profile-info-title{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+	color: #333;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.profile-info-text{
+	font-size: 16px;
+	font-weight: 200;
+	color: #333;
+	text-align: center;
+}
+.news {
+	background: #fff;
+	margin-bottom: 20px;
+	min-height: 100%;
+}
+.news-title {
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 0;
+	font-weight: 700;
+	font-size: 18px;
+	background-color: #333;
+	color: #fff;
+}
+.news-items {
+	padding: 20px ;
+
+}
+.news-user-name{
+	color: #FEC608;
+}
+.blog{
+	padding: 20px;
+}
+.blog-title{
+	margin-top: 20px;
+	font-size: 16px;
+}
+.insta-images-list{
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.insta-images-list li {
+	width: 32%;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.insta-images-list li img {
+	width: 170px;
+}
+.instagram{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.instagram-btn{
+	color: #fff;
+	background-color: #895B4E;
+	font-size: 14px;
+	padding: 8px 10px;
+	font-weight: 400;
+}
+.footer{
+	background-color: #474747;
+	color: #fff;
+	padding: 40px 20px 20px;
+	margin-top: 20px;
+}
+.footer p{
+	color: #fff;
+}
+
+.progress{
+	height: 40px;
+	background: #fff;
+
+}
+.progress-bar{
+	text-align: right;
+	background: #FEC608;
+	padding-right: 15px;
+}
+
+
+.info{
+	background: #FEC608;
+	padding: 30px;
+}
+.info h2{
+	color: #333;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.info h2 span{
+	color: #fff;
+}
+.info li {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+.form-container{
+	background: #f9feff;
+	padding: 30px;
+}
+.form-container .form-control{
+	margin-bottom: 20px;
+}
+.btn-primary{
+	background: #FEC608;
+	border-color: #FEC608;
+	transition: .2s;
+	color: #333;
+}
+.btn-primary:hover{
+	background: #d8a703;
+	border-color: #d8a703;
+	transition: .2s;
+	color: #333;
+}
+@media (max-width: 767.98px) { 
+	.info-box {
+		padding-top: 20px;
+		padding-left: 0px;
+	}
+	.profile-section {
+		padding: 10px;
+	}
+}
