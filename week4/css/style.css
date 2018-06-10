@@ -59,9 +59,10 @@ body{
 	color: #fff;
 	text-transform: uppercase;
 	padding: 10px 30px;
-	border-radius: 20px;
+	border-radius: 10px;
 	box-shadow: 0 6px #b11b31;
 	transition: .05s;
+	min-width: 200px;
 
 }
 
