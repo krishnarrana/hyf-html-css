@@ -21,6 +21,7 @@ body{
 .header p{
 	text-align: center;
 	margin-top: 20px;
+
 }
 .student{
 	padding: 8px 15px;
@@ -32,6 +33,19 @@ body{
 	border-radius: 10px;
 	font-size: 14px;
 }
+.form{
+	text-align: center;
+}
+.name-input{
+	background: #fff;
+	color: #999;
+	margin-bottom: 5px;
+	border: 0;
+	box-shadow: 0;
+	padding: 10px 15px;
+	margin-top: 20px;
+	border-radius: 10px;
+}
 .btn{
 	outline:none;
 	border:0;
@@ -40,7 +54,7 @@ body{
 	display: block;
 	margin: 0 auto 30px;
 	background: #c72e45;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	color: #fff;
 	text-transform: uppercase;
@@ -50,8 +64,18 @@ body{
 	transition: .05s;
 
 }
+
 .btn:hover{	
 	box-shadow: 0 4px #b11b31;
+	top:2px;
+}
+
+.btn-blue{	
+	background: #181842;
+	box-shadow: 0 6px #070723;
+}
+.btn-blue:hover{	
+	box-shadow: 0 4px #070723;
 	top:2px;
 }
 .btn:active{

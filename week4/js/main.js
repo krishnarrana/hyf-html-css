@@ -4,7 +4,9 @@ var classList= document.getElementById("classList");
 var list= document.getElementById("list-pair");
 
 // display class
-hYF06.forEach(function(student,index){
+function displayName(){
+	classList.innerHTML="";
+	hYF06.forEach(function(student,index){
 	var pStudent = document.createElement("SPAN");
 	pStudent.classList.add("student")
 	var name= document.createTextNode(index+1 + ". "+ student);
@@ -12,6 +14,8 @@ hYF06.forEach(function(student,index){
 	pStudent.appendChild(name);
 	classList.appendChild(pStudent);
 });
+}
+displayName();
 
 // check if random number1 matches with random number2 
 function createRandomNumber2(one,arrLength){
@@ -74,3 +78,21 @@ function myFunction() {
 }
 document.getElementById("clickBtn").addEventListener("click", myFunction);
 
+
+
+
+
+
+var addBtn= document.getElementById("add");
+addBtn.addEventListener("click", function(){
+	var name= document.getElementById("name").value;
+	if(name==""){
+		alert("Please Enter Name of Student");
+	}else{
+		hYF06.push(name);
+		document.getElementById("name").value="";
+
+	}
+	
+	displayName();
+})
