@@ -1,0 +1,93 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 14px;
+}
+p{
+	margin-bottom: 5px;
+}
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.header{
+	background: #490a3d;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+h2{
+	color: #333;
+	padding-left: 30px;
+}
+.homework-container{
+	background: #f4f7f7;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.label{
+	color: #666;
+	display: block;
+	margin-bottom: 10px;
+}
+input{
+	padding: 8px 15px;
+	display: block;
+	border: 0;
+	color: #666;
+	margin-bottom: 10px;
+}
+.btn{
+	box-shadow: 0;
+	border: 0;
+	padding: 8px 15px;
+	text-align: center;
+	cursor: pointer;
+	background: #490a3d;
+	color: #fff;
+}
+.form-conatiner{
+	display: flex;
+	padding: 0;
+}
+.form{
+	padding: 30px;
+}
+.homework1{
+	padding: 30px;
+	flex-grow: 1;
+}
+.hw-bg{
+	border: 2px solid  #bd1550;
+	animation:  in .5s ease-in-out forwards;
+}
+.homework1 p{
+	margin-bottom: 5px;
+}
+.homework1 p span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #bd1550;
+	animation:  in .5s ease-in-out forwards;
+}
+@keyframes in {
+  0% {
+    opacity: 0;
+    transform: scale(0); ;
+  }
+  
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#homework2_2{
+	max-height: 300px;
+	overflow: auto;
+}
