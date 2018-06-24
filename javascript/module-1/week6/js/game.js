@@ -38,18 +38,23 @@ Game.prototype.findCard=function(card, lookingPlayer,givingPlayer ){
 
 }
 Game.prototype.askCardToEachOne= function(askingPlayer){
-	let cardToAsk=askingPlayer.findFrequency();
-	let oldLength=askingPlayer.cards.length;
+	let cardToAsk=this.players[askingPlayer].findFrequency();
+	let oldLength=this.players[askingPlayer].cards.length;
+	let nextPlayer=askingPlayer+1;
 	for(let i=0; i<this.players.length;i++){
-		if(this.players[i]!= askingPlayer){
-			this.findCard(cardToAsk,askingPlayer,this.players[i]);
+		if(nextPlayer>3){
+			nextPlayer=0;
+		}
+		console.log(nextPlayer);
+		if(this.players[nextPlayer]!= this.players[askingPlayer]){
+			this.findCard(cardToAsk,this.players[askingPlayer],this.players[nextPlayer]);
 		}
 		
-		if(oldLength!=askingPlayer.cards.length){
-			console.log("hello")
+		if(oldLength!=this.players[askingPlayer].cards.length){
 			return true;
 			break;
 		}
+		nextPlayer++;
 	}
 	return false;
 }
@@ -64,9 +69,8 @@ Game.prototype.play=function(){
 		if(this.activePlayer >3){
 			this.activePlayer=0;
 		}
-		console.log(this.activePlayer);
 		step -=1;
-		this.askCardToEachOne(this.players[this.activePlayer]);
+		this.askCardToEachOne(this.activePlayer);
 		this.win=this.players[this.activePlayer].checkForWin();
 		if(this.win=== true){			
 			this.winner=players[this.activePlayer];
