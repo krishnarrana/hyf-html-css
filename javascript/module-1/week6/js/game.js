@@ -45,7 +45,6 @@ Game.prototype.askCardToEachOne= function(askingPlayer){
 		if(nextPlayer>3){
 			nextPlayer=0;
 		}
-		console.log(nextPlayer);
 		if(this.players[nextPlayer]!= this.players[askingPlayer]){
 			this.findCard(cardToAsk,this.players[askingPlayer],this.players[nextPlayer]);
 		}
