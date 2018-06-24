@@ -22,9 +22,44 @@ body{
 	  max-width: 500px;
 }
 .zone{
-	background: pink;
+	background:  #011627;
+	color: #fff;
 	 padding: 15px;
 }
 .game{
 	display:flex;
+}
+.btn{
+	outline:none;
+	border:0;
+	cursor: pointer;
+	position: relative;
+	margin: 0 auto 30px;
+	background: #011627;
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 5px 15px;
+	border-radius: 10px;
+	box-shadow: 0 6px #010d17;
+	transition: .05s;
+	transition: .05s;
+
+}
+
+.btn:hover{	
+	box-shadow: 0 4px #010d17;
+	top:2px;
+}
+.btn:active{
+	box-shadow: none;
+	top:6px;
+}
+.output{
+	padding: 0 30px ;
+}
+.title{
+	font-size: 24px;
+	font-weight: bold;
 }

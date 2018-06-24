@@ -75,9 +75,9 @@ Game.prototype.play=function(){
 		if(this.win=== true){			
 			this.winner=players[this.activePlayer];
 			document.getElementById("winner-info").innerHTML= `
-					<p>Winner is ${this.players[this.activePlayer].name}</p>
+					<p class="title">Winner is ${this.players[this.activePlayer].name}</p>
 					<p>Age ${this.players[this.activePlayer].age}</p>
-					<p>Winning Cards: ${ showWiningCards(this.players[this.activePlayer])}</p>
+					<p class="winningCard">Winning Cards: ${ showWiningCards(this.players[this.activePlayer])}</p>
 
 				`;
 			break;
