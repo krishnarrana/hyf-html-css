@@ -37,8 +37,10 @@ var game= new Game(players,cards);
 
 // game.players[0].findFrequency();
 
-var distributeBtn= document.getElementById("distripute-card");
+var distributeBtn= document.getElementById("distribute-card");
 distributeBtn.addEventListener("click",function(){
+
+    document.getElementById("winner-info").innerHTML="";
     game.distributeCard();
     for(let i=0; i<game.players.length; i++){
     document.getElementById("player-"+(i+1)).innerHTML= displayPlayersCards(game.players[i]);
@@ -54,18 +56,15 @@ playBtn.addEventListener("click",function(){
 });
 
 
-var playBtn= document.getElementById("reset");
+var reset= document.getElementById("reset");
 reset.addEventListener("click",function(){
+    document.getElementById("winner-info").innerHTML="";
     game.reset();
     for(let i=0; i<game.players.length; i++){
     document.getElementById("player-"+(i+1)).innerHTML= displayPlayersCards(game.players[i]);
   }
 });
 
-// var player1= document.getElementById("player-1");
-// var player2= document.getElementById("player-2");
-// var player3= document.getElementById("player-3");
-// var player4= document.getElementById("player-4");
 
 
 
@@ -79,6 +78,15 @@ function displayPlayersCards(player){
 }
 
 
+// function addPlayers(){
+//    var playerName= document.getElementById("playerName").value;
+//    var playerAge= document.getElementById("playerAge").value;
+//    player1= new Player("Krishna", 23, [], false);
+// }
 
 
 
+// var submitBtn= document.getElementById("submit-btn");
+// submitBtn.addEventListener("click",function(){
+//     addPlayers();
+// });

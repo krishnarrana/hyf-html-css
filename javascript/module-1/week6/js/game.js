@@ -4,6 +4,7 @@ function Game(players, cards){
 	this.cards= cards,
 	this.win=false;
 	this.winner={};
+	this.activePlayer=0;
 }
 
 Game.prototype.distributeCard = function(){
@@ -12,6 +13,7 @@ Game.prototype.distributeCard = function(){
 		this.players[i].cards=[];
 		this.players[i].winner=false;
 	}
+	this.activePlayer=0;
 	for(let i=0; i<this.players.length; i++){
 		for(let j=0;j<4;j++){
 			let randomNumber=Math.floor(Math.random()*newCards.length) ; // creats random cards
@@ -35,12 +37,15 @@ Game.prototype.findCard=function(card, lookingPlayer,givingPlayer ){
 	return false;		
 
 }
-Game.prototype.askCardToEachOne= function(){
-	let cardToAsk=this.players[0].findFrequency();
-	let oldLength=this.players[0].cards.length;
-	for(let i=0; i<this.players.length-1;i++){
-		this.findCard(cardToAsk,this.players[0],this.players[i+1]);
-		if(oldLength!=this.players[0].cards.length){
+Game.prototype.askCardToEachOne= function(askingPlayer){
+	let cardToAsk=askingPlayer.findFrequency();
+	let oldLength=askingPlayer.cards.length;
+	for(let i=0; i<this.players.length;i++){
+		if(this.players[i]!= askingPlayer){
+			this.findCard(cardToAsk,askingPlayer,this.players[i]);
+		}
+		
+		if(oldLength!=askingPlayer.cards.length){
 			console.log("hello")
 			return true;
 			break;
@@ -50,22 +55,42 @@ Game.prototype.askCardToEachOne= function(){
 }
 Game.prototype.play=function(){
 	if(this.players[0].cards.length===0 && this.players[1].cards.length===0 && this.players[2].cards.length===0 && this.players[3].cards.length===0 ){
+		alert("Please distribute card first");
 		return false;
 	}
 	this.win=false;
 	let step=1;
-	while(step!=0 && !this.win){
+	while( step !=0 && !this.win){
+		if(this.activePlayer >3){
+			this.activePlayer=0;
+		}
+		console.log(this.activePlayer);
 		step -=1;
-			this.askCardToEachOne();
-			this.win=this.players[0].checkForWin();
-			if(this.win=== true){
-				console.log("Winner is ", this.players[0].name);
-				console.log("game",this)
-				this.winner=this.players[0];
-				break;
+		this.askCardToEachOne(this.players[this.activePlayer]);
+		this.win=this.players[this.activePlayer].checkForWin();
+		if(this.win=== true){			
+			this.winner=players[this.activePlayer];
+			document.getElementById("winner-info").innerHTML= `
+					<p>Winner is ${this.players[this.activePlayer].name}</p>
+					<p>Age ${this.players[this.activePlayer].age}</p>
+					<p>Winning Cards: ${ showWiningCards(this.players[this.activePlayer])}</p>
+
+				`;
+			break;
+		}
+		this.activePlayer ++;
+			// this.players.push(this.players[0]);
+			// this.players.shift();
+	}
+	function showWiningCards(winningPlayer){
+		var winningCard= winningPlayer.findFrequency();
+		let winningCardCombination=``;
+		for(let i=0; i<winningPlayer.cards.length; i++){
+			if(winningPlayer.cards[i].value== winningCard){
+				winningCardCombination +=`<p>${winningPlayer.cards[i].value } ${winningPlayer.cards[i].suit } </p>`;
 			}
-			this.players.push(this.players[0]);
-			this.players.shift();
+		}
+		return winningCardCombination;
 	}
 }
 
@@ -73,6 +98,8 @@ Game.prototype.reset=function(){
 	for(let i=0; i<this.players.length; i++){
 		this.players[i].cards=[];
 		this.players[i].winner=false;
+
 	}
 	this.win=false;
+	this.activePlayer=0;
 }
