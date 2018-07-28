@@ -1,0 +1,165 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+.img{
+	max-width: 100px;
+	height: auto;
+}
+.header{
+	background: #36384E;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+.loading{
+	text-align: center;
+	color: #f00;
+	font-size: 30px;
+}
+.conatiner{
+	max-width:1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.repo-list-container{
+	margin-bottom: 30px;
+}
+.repo-list{
+	width: 100%;
+	border-collapse: collapse;
+	border:1px solid #ddd;
+}
+.repo-list td{
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.repo-list td:nth-child(2){
+	color:#666;
+}
+.loading{
+	display: none;
+}
+.show{
+	display: block;
+}
+.search-container{
+	display: flex;
+	max-width: 700px;
+	margin: 0 auto 30px;
+}
+.search{
+	display: block;
+	flex-grow: 1;
+	height: 45px;
+	font-size: 16px;
+	padding: 8px 20px;
+	box-shadow: none;
+	border:1px solid #ddd;
+	background: #f1f1f1;
+}
+.warning{
+	color:red;
+	font-weight: bold;
+	padding: 20px;
+}
+.repo-link{
+	text-decoration: none;
+	color: #0072C6;
+}
+.repo-link:hover{
+	opacity: .8;
+}
+.btn{
+	outline: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 0px;
+    transition: .05s;
+    min-width: 200px;
+    background:  #36384E;
+}
+
+.btn:hover{	
+	background: #181a2d;
+	top:2px;
+}
+.btn:active{
+	background: #181a2d;
+}
+.repos-item-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.repos-portfolio{
+	width: 32%;
+	min-height:315px;
+	background-color: #f1f1f1;
+	margin-bottom: 40px;
+	
+}
+.repos-profile-img{
+	height: 230px;
+	overflow: hidden;
+}
+.repos-profile-info{
+	padding: 20px;
+}
+a.profile-name{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+	color: #0072C6;
+	display: block;
+	margin-bottom: 5px;
+}
+a.profile-name:hover{
+	opacity: .7;
+}
+.profile-date,.profile-message{
+	font-size: 14px;
+	font-weight: 200;
+	color: #999;
+	margin-bottom: 10px;
+}
+.profile-message{
+	font-size: 16px;
+	font-weight: 400;
+	color: #666;
+}
+#repo-item-title p{
+	background: #36384E;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+a.profile-url{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+	color: #0072C6;
+	display: block;
+	margin-bottom: 5px;
+}
