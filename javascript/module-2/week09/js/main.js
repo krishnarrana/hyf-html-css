@@ -67,26 +67,41 @@ function showRepoItem(name,login){
         const item= document.querySelector("#repos-item");
         const title= document.querySelector("#repo-item-title");
         let output=``;
-        console.log(data);
         title.innerHTML=`<p>${name}</p>`;
         for(const item of data){
-
-            output +=`
-            <div class="repos-portfolio">
-            <div class="repos-profile-img" id="img2">
-            <img src="${item.author.avatar_url}">
-            </div>
-            <div class="repos-profile-info">
-            <a href="${item.author.html_url}" class="profile-name" target="_blank">${item.author.login}</a>
-            <p class="profile-date">${item.commit.author.date}</p>
-            <p class="profile-message">${item.commit.message}</p>
-            <a href="${item.html_url}" class="profile-url" target="_blank">View </a>
-            </div>
-            </div>
-            `;
-            console.log(item.author.login)
+            if(checkForNull(item)){
+                output +=`
+                <div class="repos-portfolio">
+                <div class="repos-profile-img" id="img2">
+                ${checkForNull(item.author)?
+                    `<img src="${item.author.avatar_url}">`:
+                    `No data`
+                }
+                </div>
+                <div class="repos-profile-info">
+                ${checkForNull(item.author)?
+                    `<a href="${item.author.html_url}" class="profile-name" target="_blank">${item.author.login}</a>`:
+                    `No data`
+                }
+                <p class="profile-date">${item.commit.author.date}</p>
+                <p class="profile-message">${item.commit.message}</p>
+                <a href="${item.html_url}" class="profile-url" target="_blank">View </a>
+                </div>
+                </div>
+                `;
+            }else{
+                output +="No data found"
+            }
         }
         item.innerHTML= output;
         document.querySelector(".loading").classList.remove("show");
     });
+}
+
+function checkForNull (value){
+    if(value===null){
+        return false;
+    }else{
+        return true;
+    }
 }
