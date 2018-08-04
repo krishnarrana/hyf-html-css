@@ -33,17 +33,17 @@ document.getElementById('search-btn').addEventListener("click", (e)=> {
     const searchKey= document.querySelector("#search-key");
     let output=``;
     list.innerHTML="";
-    let text="https://api.github.com/search/repositories?q=user:HackYourFuture+"+searchKey.value;
-    fetchJSONData(text, data => {
+    let text="https://api.github.com/search/repositories?q=user:HackYourFuture-CPH+"+searchKey.value;
+    fetchJSONData(text, repoData => {
         const list= document.querySelector("#repo-list");
         const searchKey= document.querySelector("#search-key");
         const infoTable = document.createElement('table');
         infoTable.classList.add("repo-list");
         list.appendChild(infoTable);
-        if(data.items==0){
+        if(repoData.items==0){
             output = "<p class='warning'>No result found</p>"
         }else{
-            for(const repo of data.items){
+            for(const repo of repoData.items){
                 output +=`
                 <tr>
                 <td>
