@@ -28,6 +28,8 @@ function fetchJSONData(url, callback) {
 
 
 document.getElementById('search-btn').addEventListener("click", (e)=> {
+    document.querySelector("#repos-item").innerHTML=""; //clear last item
+    document.querySelector("#repo-item-title").innerHTML=""; //clear last title
     e.preventDefault();
     const list= document.querySelector("#repo-list");
     const searchKey= document.querySelector("#search-key");
@@ -43,8 +45,9 @@ document.getElementById('search-btn').addEventListener("click", (e)=> {
         if(repoData.items==0){
             output = "<p class='warning'>No result found</p>"
         }else{
-            for(const repo of repoData.items){
-                output +=`
+
+            repoData.items.map( repo =>{
+                 output +=`
                 <tr>
                 <td>
                 <a href="#" class='repo-link' onclick="showRepoItem('${repo.name}','${repo.owner.login}');"> ${repo.name || ""}</a>
@@ -54,7 +57,7 @@ document.getElementById('search-btn').addEventListener("click", (e)=> {
                 </td>
                 </tr>
                 `;
-            }
+            });
         }
 
         infoTable.innerHTML= output;
@@ -63,12 +66,13 @@ document.getElementById('search-btn').addEventListener("click", (e)=> {
 }); 
 function showRepoItem(name,login){
     const url= 'https://api.github.com/repos/' + login + '/' + name + '/commits?access_token=192640a98a169c64a9bd45e293c2792375ca9860'
-    fetchJSONData(url, data => {
+    fetchJSONData(url, reposItemsData => {
         const item= document.querySelector("#repos-item");
         const title= document.querySelector("#repo-item-title");
         let output=``;
         title.innerHTML=`<p>${name}</p>`;
-        for(const item of data){
+
+        reposItemsData.map( item => {
             if(checkForNull(item)){
                 output +=`
                 <div class="repos-portfolio">
@@ -92,7 +96,10 @@ function showRepoItem(name,login){
             }else{
                 output +="No data found"
             }
-        }
+        })
+        // for(const item of reposItemsData){
+            
+        // }
         item.innerHTML= output;
         document.querySelector(".loading").classList.remove("show");
     });
