@@ -51,11 +51,18 @@ fetchJSONData(url, moviesData=> {
     const keyWords =["The", "dog", "who", "is", "not", "a", "man"];
     let totalCount= 0;
     moviesData.map( movie=>{
-        keyWords.map(keyWord =>{
-            if(search(keyWord, movie.title)){
+        // keyWords.map(keyWord =>{
+        //     if(search(keyWord, movie.title)){
+        //         totalCount ++;
+
+        //     }
+        // })
+        for(let i=0;i<keyWords.length;i++){
+            if(search(keyWords[i], movie.title)){
                 totalCount ++;
+                break;
             }
-        })
+        }
     });
 
     function search (word, str){
