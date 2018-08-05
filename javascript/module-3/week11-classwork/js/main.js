@@ -9,23 +9,14 @@ const waitThreeSecPromise = new Promise((resolve)=>{
 
 
 waitThreeSecPromise
-	.then(()=>{
-		const getMoviesPromise= fetch(moviesUrl);
-		return getMoviesPromise;
-	})
-	.then((data)=>{
-		console.log(data)
-		return data.json();
-	})
-	.then((movieList)=>{
+	.then(()=> fetch(moviesUrl))
+	.then(data=> data.json())
+	.then(movieList=>{
 		console.log(movieList);
-		const getRedditPromise =fetch(redditUrl);
-		return getRedditPromise;
+		return fetch(redditUrl);
 	})
-	.then((redditData)=>{
-		return redditData.json();
-	})
-	.then((redditList)=>{
+	.then(redditData=>redditData.json())
+	.then(redditList=>{
 		console.log(redditList.data);
 	});
 
