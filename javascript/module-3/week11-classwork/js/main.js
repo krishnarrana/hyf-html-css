@@ -4,7 +4,6 @@ const redditUrl ="https://www.reddit.com/r/ProgrammerHumor.json";
 const waitThreeSecPromise = new Promise((resolve)=>{
 	setTimeout(()=>{
 		resolve();
-
 	},3000);
 });
 
@@ -12,24 +11,22 @@ const waitThreeSecPromise = new Promise((resolve)=>{
 waitThreeSecPromise
 	.then(()=>{
 		const getMoviesPromise= fetch(moviesUrl);
-		getMoviesPromise
-			.then((data)=>{
-				data.json()
-					.then((movieList)=>{
-						console.log(movieList);
-						const getRedditPromise =fetch(redditUrl);
-
-						getRedditPromise.then((redditData)=>{
-							redditData.json()
-								.then((redditList)=>{
-									console.log(redditList.data.children);
-								});
-						});
-					})
-					
-			});
-			
-
+		return getMoviesPromise;
+	})
+	.then((data)=>{
+		console.log(data)
+		return data.json();
+	})
+	.then((movieList)=>{
+		console.log(movieList);
+		const getRedditPromise =fetch(redditUrl);
+		return getRedditPromise;
+	})
+	.then((redditData)=>{
+		return redditData.json();
+	})
+	.then((redditList)=>{
+		console.log(redditList.data);
 	});
 
 
@@ -37,4 +34,3 @@ waitThreeSecPromise
 
 
 
-	
