@@ -13,48 +13,46 @@
 </head>
 
 <body>
-        <header>
-            <h1>Movie List </h1>
-        </header>
-        <section>
-            <div class="container">
-                <form class="search-form" id="search-form">
-                    <div class="search-group">
-                        <input type="text" id="search-word" class="form-control search-input">
-                        <button id="search-btn" class="btn btn-default btn-search">Search</button>
-                        <div class="form-check-inline">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input tag-element " name="tag" value="all" checked="checked">All
-                            </label>
-                        </div>
-                        <div class="form-check-inline">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input tag-element" name="tag" value="Good">Good
-                            </label>
-                        </div>
-                        <div class="form-check-inline">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input tag-element" name="tag" value="Average" >Average
-                            </label>
-                        </div>
-                        <div class="form-check-inline">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input tag-element" name="tag" value="Bad" >Bad
-                            </label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
+    <header>
+        <h1>Movie List </h1>
+    </header>
+    <section>
         <div class="container">
-            <div class="loading">
-                Loading...
-            </div>
-            <div class="row" id="movies-list">
-            </div>
+            <form class="search-form" id="search-form">
+                <div class="search-group">
+                    <input type="text" id="search-word" class="form-control search-input">
+                    <button id="search-btn" class="btn btn-default btn-search">Search</button>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input tag-element " name="tag" value="all" checked="checked">All
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input tag-element" name="tag" value="Good">Good
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input tag-element" name="tag" value="Average">Average
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input tag-element" name="tag" value="Bad">Bad
+                        </label>
+                    </div>
+                </div>
+            </form>
         </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
+    </section>
+    <div class="container">
+        <div class="loading">
+            Loading...
+        </div>
+        <div class="row" id="movies-list">
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 

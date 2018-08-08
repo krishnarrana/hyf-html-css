@@ -9,7 +9,7 @@ p {
 }
 
 header {
-    background:  #490a3d;
+    background: #490a3d;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -115,21 +115,26 @@ h1 {
 .running-time {
     margin-bottom: 5px;
 }
-.search-form{
-	margin-bottom: 30px;
+
+.search-form {
+    margin-bottom: 30px;
 }
-.search-group{
-	display: flex;
+
+.search-group {
+    display: flex;
 }
-.form-check-inline{
-	min-width: 80px;
-	padding-left: 10px;
+
+.form-check-inline {
+    min-width: 80px;
+    padding-left: 10px;
 }
-.search-input{
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
+
+.search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
-.btn-search{
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+
+.btn-search {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
