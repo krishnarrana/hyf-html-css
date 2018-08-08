@@ -1,0 +1,135 @@
+body {
+    background: #fff;
+    font-size: 14px;
+}
+
+p {
+    color: #999;
+    font-size: 14px;
+}
+
+header {
+    background:  #490a3d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 20px 0 rgba(46, 61, 73, .5);
+}
+
+h1 {
+    color: #fff;
+    font-size: 28px;
+}
+
+.loading {
+    font-size: 21px;
+    color: #f00;
+    text-align: center;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.footer {
+    background-color: #474747;
+    color: #fff;
+    padding: 40px 20px 20px;
+    margin-top: 20px;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.movie-list {
+    min-height: 180px;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+    border: 1px solid #f1f1f1;
+}
+
+.tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, .2);
+}
+
+.tag.good {
+    color: #00ACC1;
+}
+
+.tag.average {
+    color: #333;
+}
+
+.tag.bad {
+    color: #f00;
+}
+
+.title {
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #490a3d;
+}
+
+.year {
+    font-size: 14px;
+}
+
+.ratings i {
+    color: yellow;
+}
+
+.votes i {
+    color: green;
+}
+
+.running-time i {
+    color: red;
+}
+
+.ratings,
+.votes,
+.running-time {
+    margin-bottom: 5px;
+}
+.search-form{
+	margin-bottom: 30px;
+}
+.search-group{
+	display: flex;
+}
+.form-check-inline{
+	min-width: 80px;
+	padding-left: 10px;
+}
+.search-input{
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.btn-search{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
