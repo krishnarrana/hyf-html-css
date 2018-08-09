@@ -30,6 +30,11 @@ function getRadioVal(form, name) {
     }
     return val;
 }
+function secondsToHrs(sec){
+    let hrs= (sec/3600).toFixed(0)
+    let mins =((sec%3600) /60).toFixed(0)
+    return hrs + " hrs "+ mins + " mins "
+}
 fetch(moviesUrl)
     .then(movieData => movieData.json())
     .then(movieList => {
@@ -50,7 +55,7 @@ fetch(moviesUrl)
                 <div class="col-sm-4">
                     <div class="movie-list">
                         <h2 class="title">${movie.title}</h2>
-                        <p class="year">(${movie.year}) <span>${movie.running_times} secs</span></p>
+                        <p class="year">(${movie.year}) <span>${secondsToHrs(movie.running_times) }</span></p>
                         <p class="ratings"><i class="fas fa-star"></i> <span>${movie.rating}</span></p>
                         <p class="votes"> <i class="fas fa-thumbs-up"></i> ${movie.votes}</p>
                         <div class="tag ${movie.tag.toLowerCase()}">${movie.tag}</div>
@@ -81,7 +86,7 @@ fetch(moviesUrl)
                     <div class="col-sm-4">
                         <div class="movie-list">
                             <h2 class="title">${movie.title}</h2>
-                            <p class="year">(${movie.year}) <span>${movie.running_times} secs</span></p>
+                            <p class="year">(${movie.year}) <span>${secondsToHrs(movie.running_times) }</span></p>
                             <p class="ratings"><i class="fas fa-star"></i> <span>${movie.rating}</span></p>
                             <p class="votes"> <i class="fas fa-thumbs-up"></i> ${movie.votes}</p>
                             <div class="tag ${movie.tag.toLowerCase()}">${movie.tag}</div>
