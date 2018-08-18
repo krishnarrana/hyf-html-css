@@ -23,11 +23,8 @@ function getMoviesWithDecade(movieList, decade) {
     return movieList.filter(movie => {   
 
         if (decade === "all") {
-            console.log("all" ,decade);  
             return movie.year;
         } else {
-            console.log("selected" ,decade+9);
-            console.log("movie" ,movie.year)
             return movie.year >= decade && movie.year <= (Number(decade) +9);
 
         }
