@@ -20,13 +20,15 @@ console.log(divisbleBy3());
 console.log(divisbleBy10());
 console.log(divisbleBy21());
 
-let totalDivisibleNumbers = [];
+function createNumbersArray() {
+    let totalDivisibleNumbers = [];
 
-for (let i = 1; i <= 30; i++) {
-    totalDivisibleNumbers.push(divisibleFactory(i)().length);
+    for (let i = 1; i <= 30; i++) {
+        totalDivisibleNumbers.push(divisibleFactory(i)().length);
+    }
+
+    return totalDivisibleNumbers;
 }
-
-console.log(totalDivisibleNumbers);
 
 
 // html output
@@ -40,5 +42,5 @@ document.getElementById("homework2_4").innerHTML = `${
   divisbleBy21()
 }`
 document.getElementById("homework2_5").innerHTML = `${
-  totalDivisibleNumbers
+  createNumbersArray()
 }`
