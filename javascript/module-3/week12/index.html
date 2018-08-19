@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HackYourFuture HomeWork</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="header">Small exercises on Closure and Promise </h1>
+    <div class="container">
+        <button id="btn-0">Button 1!</button>
+        <button id="btn-1">Button 2!</button>
+        <button id="btn-2">Button 3!</button>
+    </div>
+    <script type="text/javascript">
+        let prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+        for (let btnNum = 0; btnNum < prizes.length; btnNum++) {
+            // for each of our buttons, when the user clicks it...
+            document.getElementById('btn-' + btnNum).onclick = function() {
+                // tell her what she's won!
+                alert(prizes[btnNum]);
+            };
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

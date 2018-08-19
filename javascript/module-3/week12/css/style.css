@@ -1,0 +1,55 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	font-size: 14px;
+}
+p{
+	margin-bottom: 5px;
+}
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.header{
+	background: #490a3d;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+h2{
+	color: #333;
+	padding-left: 30px;
+}
+.homework-container{
+	background: #f4f7f7;
+	padding: 30px;
+	margin-bottom: 30px;
+	overflow: auto;
+}
+
+ .homework-container p span{
+	font-size: 16px;
+	font-weight: bold;
+	color: #bd1550;
+	animation:  in .5s ease-in-out forwards;
+}
+
+#homework2_2{
+	max-height: 300px;
+	overflow: auto;
+}
+.loading{
+	display: none;
+	font-size: 21px;
+	text-align: center;
+	color: #f00;
+	padding: 20px;
+}
+.show{
+	display: block;
+}
